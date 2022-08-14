@@ -8,7 +8,7 @@ import json
 from bs4 import BeautifulSoup
 import telebot
 
-bot = telebot.TeleBot("5299843784:AAGzxOV6d7ZkxclNreC2yamuJHZordcoV8Q")
+bot = telebot.TeleBot("TOKEN")
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
