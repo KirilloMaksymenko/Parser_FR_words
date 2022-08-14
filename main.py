@@ -55,7 +55,7 @@ def get_verbs(verb):
         
     else:
         print("[INFO] Use from database")
-        return f'Verb - {data[verb.lower()]["verb"]} \n\nJe - {data[verb.lower()]["je"]} \nTu - {data[verb.lower()]["je"]} \nIl/Elle - {data[verb.lower()]["je"]} \nNous - {data[verb.lower()]["je"]} \nVous - {data[verb.lower()]["je"]} \nIls/Elles - {data[verb.lower()]["je"]}'
+        return f'Verb - {data[verb.lower()]["verb"]} \n\nJe - {data[verb.lower()]["je"]} \nTu - {data[verb.lower()]["tu"]} \nIl/Elle - {data[verb.lower()]["il/elle"]} \nNous - {data[verb.lower()]["nous"]} \nVous - {data[verb.lower()]["vous"]} \nIls/Elles - {data[verb.lower()]["ils/elles"]}'
 
 
 
