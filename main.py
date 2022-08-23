@@ -1,6 +1,6 @@
 #project - Parser_FR_words , Author - Maksymenko Kyrylo
 
-#"https://conjugator.reverso.net/conjugation-french-verb-{verb}.html"
+
 import os
 import time
 from ast import Pass
@@ -29,7 +29,7 @@ def translate_verb(message):
     txt,path_ogg = traduit_verb(trad_verb)
     bot.send_message(message.chat.id, txt)
     bot.send_voice(message.chat.id, open(path_ogg, 'rb'))
-    os.remove(path_ogg)  
+    os.remove(path_ogg) 
     
 
 @bot.message_handler(func=lambda message: True)
