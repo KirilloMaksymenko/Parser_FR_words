@@ -14,7 +14,7 @@ bot = telebot.TeleBot("5299843784:AAGzxOV6d7ZkxclNreC2yamuJHZordcoV8Q")
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-	bot.send_message(message.chat.id, "Enter /find (verb)\nTo check again entre /ag")   
+	bot.send_message(message.chat.id, "Enter (verb)")   
 
 @bot.message_handler(commands=['trad'])
 def translate_verb(message):
