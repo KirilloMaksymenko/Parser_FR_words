@@ -9,14 +9,8 @@ import requests
 import json
 from bs4 import BeautifulSoup
 import telebot
-from telebot import types
-from googletrans import Translator
-import translators as ts
-
-from gtts import gTTS
 
 bot = telebot.TeleBot("5299843784:AAGzxOV6d7ZkxclNreC2yamuJHZordcoV8Q")
-translator = Translator()
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
