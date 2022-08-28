@@ -1,6 +1,6 @@
 #project - Parser_FR_words , Author - Maksymenko Kyrylo
 
-
+#"https://conjugator.reverso.net/conjugation-french-verb-{verb}.html"
 import os
 import time
 from ast import Pass
@@ -9,12 +9,18 @@ import requests
 import json
 from bs4 import BeautifulSoup
 import telebot
+from telebot import types
+from googletrans import Translator
+import translators as ts
+
+from gtts import gTTS
 
 bot = telebot.TeleBot("5299843784:AAGzxOV6d7ZkxclNreC2yamuJHZordcoV8Q")
+translator = Translator()
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-	bot.send_message(message.chat.id, "Enter (verb)")   
+	bot.send_message(message.chat.id, "Enter /find (verb)\nTo check again entre /ag")   
 
 @bot.message_handler(commands=['trad'])
 def translate_verb(message):
@@ -23,7 +29,7 @@ def translate_verb(message):
     txt,path_ogg = traduit_verb(trad_verb)
     bot.send_message(message.chat.id, txt)
     bot.send_voice(message.chat.id, open(path_ogg, 'rb'))
-    os.remove(path_ogg) 
+    os.remove(path_ogg)  
     
 
 @bot.message_handler(func=lambda message: True)
